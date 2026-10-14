@@ -42,6 +42,10 @@
 <!-- Your community, and what your classifier sorts posts into. Three or four
      sentences. -->
 
+This community is a subreddit for people visiting New York City. For this
+project, I read posts from the subreddit that relate to Christmas, such as
+questions and recommendations about holiday events, attractions, and activities
+in NYC.
 
 
 ---
