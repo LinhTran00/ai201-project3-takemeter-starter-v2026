@@ -39,14 +39,23 @@
 
 ## What This Does
 
-<!-- Your community, and what your classifier sorts posts into. Three or four
-     sentences. -->
+<!-- Your community, and what your classifier sorts posts into. Three or four sentences. -->
 
 This community is a subreddit for people visiting New York City. For this
 project, I read posts from the subreddit that relate to Christmas, such as
 questions and recommendations about holiday events, attractions, and activities
 in NYC.
 
+<!-- Candidate distinctions noticed while reading posts:
+     1. Specificity: some posts name a particular place or event (e.g. a
+        specific show, tree, or market), while others ask in general terms
+        without naming any location or event.
+     2. Cost concerns: some posts bring up money, such as show tickets, food
+        reservations, or subway fares, while others don't mention budget.
+     3. Weather: many posts ask how cold, snowy, or rainy weather will affect
+        their holiday plans.
+     4. Crowd avoidance: many posts ask how to avoid crowds, such as the best
+        times to visit or less busy alternatives to popular spots. -->
 
 ---
 
