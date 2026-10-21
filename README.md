@@ -81,7 +81,7 @@ For something a little different, consider a visit to Olifactory on Mott St, whe
 **Example 2:**
 > Might get downvoted but, Roosevelt island is a great spot not too far from JFK and 20 min uber (~$30-$40) to LGA. It has awesome views over Manhattan skyline, waterfront and nice park on the south point with the views both of Manhattan and Long Island City (& Pepsi cola sign). if it's a weekend, F train (Airtrain+E+F) goes directly to the island in like ~45-50 mins from JFK if all schedules align perfectly. If you end up having a bit more time to spare after getting to RI and walk around - you can take a tram to Manhattan and walk a little bit to see townhouses on the Upper East side on 61 and 62nd street decorated for Halloween, and walk 10 mins to Park Avenue for iconic Metlife building view (it all will take like 40-50 mins with 5 min rides on the tram each way).
 
-### `quick take`
+### `quick_take`
 
 **Definition:** A short, to-the-point reaction or recommendation that may name
 a place but gives no numbers and no detail description of the place 
@@ -94,7 +94,7 @@ a place but gives no numbers and no detail description of the place
 
 ### The hardest boundary
 
-**Which two labels:** `informative` vs. `quick take`, when a short post names a
+**Which two labels:** `informative` vs. `quick_take`, when a short post names a
 specific place.
 
 **The decision rule I used every time:**
@@ -104,7 +104,7 @@ If the post includes at least one concrete, checkable detail (a number like a
 price, time, or distance, or a description of what a place is like or how to
 get there), it is `informative`, even if it is short or opinionated. Naming a
 place without describing it, or giving an opinion without explaining why, does
-not count, so that post is a `quick take`.
+not count, so that post is a `quick_take`.
 
 
 

@@ -60,7 +60,7 @@ Overall accuracy is at least 0.80 on the held-out set, on all three seeds.
 **Why this target:**
 My two labels mostly differ in things you can see in the text: `informative`
 posts have numbers (prices, times, distances) and descriptions of places, and
-`quick take` posts are short and leave those out. So the model should get most
+`quick_take` posts are short and leave those out. So the model should get most
 posts right. I don't expect much more than 0.80, because my hardest boundary
 (short posts that name a place, or give an opinion without saying why) is hard
 even for me, and those posts will make up most of the errors. I'm setting this
@@ -122,7 +122,7 @@ reliably catch those, it isn't doing the job.
 
 **Why this target:**
 I expect `informative` to be my smaller label. If it falls below 30%, always
-guessing `quick take` would score over 0.70 accuracy, which leaves my 0.80
+guessing `quick_take` would score over 0.70 accuracy, which leaves my 0.80
 overall target too close to a model that learned nothing. A small
 `informative` share also means very few test examples, which makes the F1 in
 criterion #3 even jumpier. If I come in under 30%, I'll collect more detailed
@@ -141,7 +141,7 @@ on all three seeds.
 
 **Why this target:**
 Most of my posts have clear signals: numbers and place descriptions for
-`informative`, or a short reply with neither for `quick take`. The model should
+`informative`, or a short reply with neither for `quick_take`. The model should
 be sure about those, and right. Its mistakes should mostly fall on my hardest
 boundary, short posts that name a place or give an opinion without saying why,
 and it should be less sure there. If confident predictions are only as accurate
