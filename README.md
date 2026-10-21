@@ -69,37 +69,28 @@ activities in NYC.
 ### `informative`
 
 **Definition:** Advice backed by concrete, checkable details, such as numbers
-(prices, travel times, distances, years) or descriptions of what a place is
-like and how to get there, so the reader could act on it or picture it without
-asking a follow-up question.
+(prices, travel times, distances, years) or descriptions of what a place/area is like
 
 **Example 1:**
-> 
-For some local pubs and bars you can just hang in, I'd suggest the Old Town Tavern on 18th St (operating since 1892, backdrop for a bunch of movies), Pete's Tavern in the Grammercy Park area (operating since 1864, O'Henry wrote stories here, and can be busy), The Whitehorse tavern on Hudson St is a good place to chill (2nd oldest bar since 1880, a favorite with the Beat poets of the 1950s).
-
+> For some local pubs and bars you can just hang in, I'd suggest the Old Town Tavern on 18th St (operating since 1892, backdrop for a bunch of movies), Pete's Tavern in the Grammercy Park area (operating since 1864, O'Henry wrote stories here, and can be busy), The Whitehorse tavern on Hudson St is a good place to chill (2nd oldest bar since 1880, a favorite with the Beat poets of the 1950s).
 If you go south from Washington Square on Macdougal St, there are a bunch of little trattorias and coffee bars that are a good stop. Eataly on the southwest side of Madison Park at 23rd st is an italian food and restaurant market with plenty of choices and places to sit. Good coffees and gelatos.
-
 A bit more upscale with a Parisian cafe flair, consider Steak Frites on 9th ave. Or for an adventure for some good dim sum, try the Nom Wah tea parlor on Doyers St. Its a small very local place that's been around since 1920. You will think you've teleported to a back ally in Hong Kong.
-
 For something a little different, consider a visit to Olifactory on Mott St, where you can design your own perfume.
 
+
 **Example 2:**
-> 
-Might get downvoted but, Roosevelt island is a great spot not too far from JFK and 20 min uber (~$30-$40) to LGA. It has awesome views over Manhattan skyline, waterfront and nice park on the south point with the views both of Manhattan and Long Island City (& Pepsi cola sign). if it's a weekend, F train (Airtrain+E+F) goes directly to the island in like ~45-50 mins from JFK if all schedules align perfectly. If you end up having a bit more time to spare after getting to RI and walk around - you can take a tram to Manhattan and walk a little bit to see townhouses on the Upper East side on 61 and 62nd street decorated for Halloween, and walk 10 mins to Park Avenue for iconic Metlife building view (it all will take like 40-50 mins with 5 min rides on the tram each way).
+> Might get downvoted but, Roosevelt island is a great spot not too far from JFK and 20 min uber (~$30-$40) to LGA. It has awesome views over Manhattan skyline, waterfront and nice park on the south point with the views both of Manhattan and Long Island City (& Pepsi cola sign). if it's a weekend, F train (Airtrain+E+F) goes directly to the island in like ~45-50 mins from JFK if all schedules align perfectly. If you end up having a bit more time to spare after getting to RI and walk around - you can take a tram to Manhattan and walk a little bit to see townhouses on the Upper East side on 61 and 62nd street decorated for Halloween, and walk 10 mins to Park Avenue for iconic Metlife building view (it all will take like 40-50 mins with 5 min rides on the tram each way).
 
 ### `quick take`
 
 **Definition:** A short, to-the-point reaction or recommendation that may name
-a place but gives no numbers and no description of the place or reasoning
-behind the advice.
+a place but gives no numbers and no detail description of the place 
 
 **Example 1:**
->
-stomach the cost vs stomach the commute. You can always do half and half. Plan hotels on the party nights and reserve
+>stomach the cost vs stomach the commute. You can always do half and half. Plan hotels on the party nights and reserve
 
 **Example 2:**
->
-If she likes old buildings I would highly recommend the tenement museum which is near little Italy and Chinatown
+>If she likes old buildings I would highly recommend the tenement museum which is near little Italy and Chinatown
 
 ### The hardest boundary
 
