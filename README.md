@@ -222,16 +222,16 @@ The post is a short, opinionated reaction. It is one recommendation (don’t sta
 
 | Measure | Baseline | Trained | Difference |
 |---|---|---|---|
-| Overall accuracy |  |  |  |
-| Macro F1 |  |  |  |
-| F1 — `label_one` |  |  |  |
-| F1 — `label_two` |  |  |  |
+| Overall accuracy | 0.526 | 0.816 | +0.289 |
+| Macro F1 | 0.525 | 0.813 | +0.288 |
+| F1 — `informative` | 0.550 | 0.788 | +0.238 |
+| F1 — `quick_take` | 0.500 | 0.837 | +0.337 |
 
-**What I predicted before I looked:**
+**What I predicted before I looked:** The trained model will have higher number than the baseline model on every measure. 
 <!-- Milestone 1 asks you to write this BEFORE seeing the trained numbers. A
      prediction made afterwards isn't one. -->
 
-**What the gap actually means:**
+**What the gap actually means:** The baseline is close to a coin flip (0.526 accuracy), and the trained model reaches 0.816, so fine-tuning really learned the difference between the labels. `quick_take` improved the most (+0.337 F1). `informative` is still the weaker label.
 <!-- If the baseline matched your trained model, your fine-tuning added
      nothing — and that is a real finding, not a failure. Say it plainly. -->
 
