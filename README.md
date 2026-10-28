@@ -100,11 +100,15 @@ specific place.
 **The decision rule I used every time:**
 <!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
      if the tone is heated." -->
-If the post includes at least one concrete, checkable detail (a number like a
-price, time, or distance, or a description of what a place is like or how to
-get there), it is `informative`, even if it is short or opinionated. Naming a
-place without describing it, or giving an opinion without explaining why, does
-not count, so that post is a `quick_take`.
+If the post gives at least one concrete, checkable detail about a place, it is
+`informative`, even if it is short or opinionated. A detail counts if it is
+either a number (price, travel time, distance, year) or a description specific
+enough that a reader could picture the place or find their way there (what it
+looks like, what it's known for, how to get there). If the post only names a
+place, or gives an opinion without saying why, it is a `quick_take`.
+
+Test: remove the place name. If nothing checkable or picturable is left, it's
+a `quick_take`.
 
 
 
@@ -115,19 +119,18 @@ not count, so that post is a `quick_take`.
 <!-- Where you collected from, how you labelled, your counts, and three hard
      cases. -->
 
-**Where the posts came from:**
+**Where the posts came from:** https://www.reddit.com/r/visitingnyc/
 
-**How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
-Say so plainly — the disclosure is required, not penalised. -->
+**How I labelled them:** Pre-labelled with AI and going through all of them to correct as needed. <!-- Cold first? Pre-labelled with AI and corrected?
+Say so plainly — the disclosure is required, not penalised. --> 
 
 **Counts per label:**
 
 | Label | Count | Share |
 |---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-| **Total** |  | 100% |
+| quick_take |  142|57.26%  |
+| informative |  106|42.74%  |
+| **Total** |  248| 100% |
 
 **Three hard cases**
 
@@ -136,24 +139,24 @@ Say so plainly — the disclosure is required, not penalised. -->
 
 **1.**
 > *The post:*
->
+> I wouldn’t. LIRR trains don’t run as frequently as the trains in the city and you’d have to schedule it out, it sounds like a lot to do every day. I’d do a couple nights in the city and maybe a couple nights with them on the days you want to do Queens and Brooklyn (which you should do, don’t only see Manhattan).
 > *Could have been:*
->
-> *I chose, because:*
+> informative
+> *I chose "quick_take", because:* although it names a few places (the LIRR, Queens, Brooklyn, Manhattan), it stays vague — it gives no train frequencies or travel times and no details about what to do in Queens or Brooklyn. It reads as a personal recommendation ("I wouldn't") rather than information the reader can act on.
 
 **2.**
 > *The post:*
->
+> I just came back from a 1 week trip to nyc and was staying in Long Island the whole time. Commute is long but doable I just woke up early everyday and headed into the city for a whole day to maximize my time. If you really want to experience the super late night life maybe get a hotel for one or two days, but I think its not such a huge deal to stay in Long Island. I was able to do everything I wanted to do
 > *Could have been:*
->
-> *I chose, because:*
+> quick_take
+> *I chose "informative", because:* although it has no useful specifics (the only number is "1 week"), it explains *why* the long commute is doable — waking up early and spending full days in the city — and suggests a concrete alternative (a hotel for a night or two for late-night plans). That firsthand reasoning gives the reader actionable guidance, which tips it from a quick take into informative.
 
 **3.**
 > *The post:*
->
+> Long island is not a home base for a New York City vacation. Loads of people in the tri-state area love to delude themselves, and others, that they’re in close proximity to “the city” but they’re simply not. They’re in suburbia and it’s a significant distance away from Manhattan.
 > *Could have been:*
->
-> *I chose, because:*
+> quick_take
+> *I chose "informative", because:* it reads like local insight — it corrects a common misconception that Long Island is close to "the city," explaining that it is suburbia and a significant distance from Manhattan. For a visitor deciding where to stay, that context about how far they would be from the center is genuinely useful, even without exact travel times. This kind of insider description is the detail a reader needs to picture how far Long Island really is from the city.
 
 ---
 
@@ -161,15 +164,13 @@ Say so plainly — the disclosure is required, not penalised. -->
 
 <!-- Your starting model, your settings, and anything you changed and why. -->
 
-**Base model:**
+**Base model:** distilbert-base-uncased
 
-**Settings:** <!-- epochs, learning rate, batch size, seed -->
+**Settings:** 3 epochs, learning rate 2e-5, batch size 16, seed 42 (three-seed run: 42, 7, 2024)
 
-**Anything I changed from the defaults, and why:**
+**Anything I changed from the defaults, and why:** I didn't change anything
 
-**Split sizes:** <!-- train / val / test, and per-label counts in the test
-split. If a label had fewer than about 8 in test, say so — it explains a lot
-of next unit's variance. -->
+**Split sizes:** train 172 / val 38 / test 38. Test split per label: quick_take 22, informative 16.
 
 
 
@@ -186,17 +187,26 @@ of next unit's variance. -->
 
 **Moment 1**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* "Here are my label definitions and one post that sits between two of them. Make the strongest case for each of the two labels. Don't tell me which one is right and don't rewrite my definitions." with my label definitions and post
+- *What came back:* 
+
+Case for informative
+
+The post gives actionable advice with a reason attached. It tells the reader not to use Long Island as a base for a NYC trip, and it explains why: the area is suburban, and it sits a significant distance from Manhattan. That is a description of what the place is like (suburbia, not urban core) and a stated rationale, which your quick take definition says is absent from quick takes. A reader can act on it immediately (book elsewhere) without asking “why not?” The post also corrects a specific misconception, that people in the tri-state area are “close” to the city, so it carries real content beyond a bare verdict. It names no numbers, but the definition says “numbers... or descriptions of what a place is like,” and “suburbia” plus “significant distance” is a description of the place’s character and its relationship to Manhattan. The reasoning is also checkable: anyone can look up Long Island’s distance and transit times to confirm it.
+
+Case for quick take
+
+The post is a short, opinionated reaction. It is one recommendation (don’t stay on Long Island) delivered with attitude (“love to delude themselves”), which is the register of a reaction rather than a guide. It names a place but gives no numbers: no miles, no train times, no prices, no years. “Significant distance” and “suburbia” are vague and generic, not concrete, checkable details, and they don’t describe the place in any way that would let a reader picture it (no mention of the LIRR, towns, or what the commute is like). The reader would still need a follow-up: how far, how long, how do I get in? The “reasoning” is a single assertion restated (“not close because it’s far”), which is closer to emphatic opinion than to supporting explanation. And the post is two sentences long, built around a punchy verdict, which fits “short, to-the-point reaction or recommendation.”
+
+- *What I changed:* I didn't use this to change anything beside to see how my label works. Since it works like I want, so I keep the definition as it is. 
 
 **Moment 2**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* A script to collect about 200 comments from r/VisitingNYC and put them into `labels.csv`, skipping deleted/removed comments and AutoModerator posts.
+- *What came back:* `collect_comments.py`. Reddit blocks logged-out scripts, so it doesn't pull from Reddit directly. Instead I save each thread's `.json` page from my browser into the `threads/` folder, and the script walks every comment (replies included) and adds each one to `labels.csv` as a row with the `text` filled in and the `label` left blank. Re-running it keeps the rows I've already labelled and only adds new comments.
+- *What I changed:* I used the script only to fill in the `text` column. I picked which threads to save and which to delete. 
 
-**Pre-labelling disclosure:**
+**Pre-labelling disclosure:** I used AI to pre-label the comments, then reviewed every label myself. Where I disagreed with the AI's label, I changed it and marked the row with "cold" in the `note` column of `labels.csv`.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
