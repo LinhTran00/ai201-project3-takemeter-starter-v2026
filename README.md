@@ -244,26 +244,25 @@ The post is a short, opinionated reaction. It is one recommendation (don’t sta
 <!-- Five criteria across three seeds. The notebook's section 6 prints the
      spread table; the Target and Verdict columns are yours. -->
 
-| Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
-|---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| Measure | Target | Seed 42 | Seed 7 | Seed 2024 | Spread | Verdict |
+|---|---|---|---|---|---|---|
+| Overall accuracy | ≥ 0.80 | 0.816 | 0.737 | 0.684 | 0.132 | MISSED |
+| Macro F1 | ≥ 0.80 | 0.813 | 0.696 | 0.649 | 0.163 | MISSED |
+| F1 — `quick_take` | ≥ 0.80| 0.837 | 0.808 | 0.760 | 0.077 |MISSED |
+| F1 — `informative` | ≥ 0.65 | 0.788 | 0.583 | 0.538 | 0.249 | MISSED |
+
 
 ### Confusion matrix
 
 <!-- ⚠️ TYPED AS A MARKDOWN TABLE. The notebook prints one ready to paste.
      An image of a matrix earns nothing. -->
 
-| true \ predicted |  |  |  |
-|---|---|---|---|
-| **** |  |  |  |
-| **** |  |  |  |
-| **** |  |  |  |
+| true \ predicted | quick_take | informative |
+|---|---|---|
+| **quick_take** | 18 | 4 |
+| **informative** | 3 | 13 |
 
-**My biggest off-diagonal number, and what it means:**
+**My biggest off-diagonal number, and what it means:** My biggest off-diagonal number is 4: real quick_take posts predicted as informative. The other direction is 3, so the confusion is roughly symmetric. This suggests the model isn’t biased toward one label. Instead, the boundary between quick_take and informative is unclear in my label definitions. These 7 posts are where I should tighten the rules.
 <!-- Not "the model made mistakes" — WHICH boundary it didn't learn, and which
      direction. "7 real analysis posts were called hot_take and only 3 went the
      other way" is a direction, not just an error rate. -->
